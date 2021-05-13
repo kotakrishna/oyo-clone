@@ -1,5 +1,31 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### Server Side Props
+
+Next.js Architecture:
+1-Visible, live on domain. It checks for the the `getServerSideProps ` in the page , if the page includes it. Next js will run that function and then render that page.
+we can do fetch and other pull stuff
+
+For the static pages which does not have getServerSideProps at all that will be set as Completely Static and they are given immediately
+
+### Static Props
+
+at initial for dynamic routes the the pre build pages are 0;
+but when the use visits the dynamic route the get static prop saves them in cache.
+
+thus when new use visit that page the is served as static.
+
+Revalidate = create that page after that time;
+// _ time : 0 5 6 6 6 6 8 9 9 10 13 14 17
+// _ req : 1 2 3 4 5 6 7 8 9 10 11 12 13
+// \* vers : 1 1 1 1 1 1 1 1 1 1 2 2 2
+
+### Get Static Path
+
+for the params from url.. inform the next js
+
+it returns paths as a array and then those will be build during build time.
+
 ## Getting Started
 
 First, run the development server:

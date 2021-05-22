@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-height: 300px;
+  width: 80%;
+  margin: auto;
+  //   border: 1px solid black;
+
+  .Image {
+    flex-grow: 30%;
+    display: flex;
+    flex-direction: row;
+    * {
+      margin: 3px;
+    }
+    .img {
+      width: 430px;
+    }
+    .otherImages {
+      display: flex;
+      flex-direction: column;
+      .OthImg {
+        width: 100px;
+      }
+    }
+  }
+  .details {
+    // border: 1px solid black;
+    padding: 10px;
+    padding-top: 0px;
+    flex-grow: 1.5;
+    width: auto;
+    h2 {
+      margin: 0px auto;
+    }
+    .address {
+      margin-top: 2px;
+      font-size: 16px;
+    }
+    .rating {
+      display: flex;
+      flex-direction: row;
+      * {
+        padding: 2px;
+      }
+    }
+    .facilities {
+      display: flex;
+      flex-direction: row;
+      * {
+        padding: 2px;
+      }
+    }
+    .Sanitation {
+      display: flex;
+      flex-direction: row;
+      * {
+        padding: 2px;
+      }
+    }
+    .priceAndBooking {
+      //   border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      //   position: relative;
+      margin-top: 50px;
+      .price {
+        padding: 2px;
+        // margin: auto;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        * {
+          border: 0.5px solid black;
+          background-color: inherit;
+          padding: 10px;
+          font-size: 20px;
+          font-weight: bolder;
+          margin: auto 10px;
+        }
+        .bookNow {
+          background-color: #1ab64f;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

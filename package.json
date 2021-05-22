@@ -9,6 +9,8 @@
     "seeder": "node utils/seeder"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "@zeit/next-sass": "^1.0.1",
     "mongoose": "^5.12.8",
     "next": "10.2.0",

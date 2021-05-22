@@ -1,0 +1,66 @@
+.Section {
+  background-image: url("/login_com.png");
+  height: 100vh;
+  background-size: 100% 100%;
+  padding: 30px;
+  * {
+    color: #fff;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .middle {
+    display: grid;
+    grid-template-columns: 65% 45%;
+    .paper {
+      margin-left: 10%;
+      width: 100%;
+      height: 500px;
+      min-width: 400px;
+      max-width: 450px;
+      max-height: 900px;
+      background-color: #fff;
+      padding: 10px;
+      * {
+        color: black;
+      }
+      .top {
+        background-color: red;
+        color: white;
+        padding: 10px;
+      }
+      .second {
+        padding: 20px;
+        .LoginSign {
+          font-size: 25px;
+          font-weight: bolder;
+        }
+        .input {
+          border: none;
+          padding: 30px;
+          outline: none;
+          font-size: 20px;
+          width: 100%;
+        }
+        .verify {
+          padding: 5%;
+          width: 60%;
+          border: none;
+          font-size: 22px;
+          font-weight: bolder;
+          color: #fff;
+        }
+        .red {
+          color: red;
+        }
+      }
+    }
+  }
+}
+.subTitle {
+  width: 60%;
+  font-size: 25px;
+  h6 {
+    font-size: 22px;
+  }
+}

@@ -24,12 +24,12 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-interface IMenu{
-    title:String,
-    options:Array<String>
+interface IMenu {
+  title: String,
+  options: Array<String>
 }
 
-export default function MenuListComposition({title,options}:IMenu) {
+export default function MenuListComposition({ title, options }: IMenu) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
@@ -64,7 +64,7 @@ export default function MenuListComposition({title,options}:IMenu) {
   }, [open]);
 
   return (
-    <div className={classes.root}>
+    <section className={classes.root}>
       <div>
         <Button
           ref={anchorRef}
@@ -72,22 +72,22 @@ export default function MenuListComposition({title,options}:IMenu) {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-            {title }
-          
-          <span> {!open ? <Icon> <KeyboardArrowDownIcon fontSize="small"/></Icon> : <Icon> <KeyboardArrowUpIcon fontSize="small"/></Icon>}
-              </span>
+          {title}
+
+          <span> {!open ? <Icon> <KeyboardArrowDownIcon fontSize="small" /></Icon> : <Icon> <KeyboardArrowUpIcon fontSize="small" /></Icon>}
+          </span>
         </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+        <Popper style={{ zIndex: 10 }} open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
-              style={{ width:"300px" , transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+              style={{ width: "300px", transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
             >
-              <Paper >            
+              <Paper >
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                      <h4>Popular Locations</h4>
-                      {options.map((item)=>(<MenuItem onClick={handleClose}>{item}</MenuItem>))}
+                    <h4>Popular Locations</h4>
+                    {options.map((item) => (<MenuItem onClick={handleClose}>{item}</MenuItem>))}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -95,6 +95,6 @@ export default function MenuListComposition({title,options}:IMenu) {
           )}
         </Popper>
       </div>
-    </div>
+    </section>
   );
 }

@@ -62,23 +62,23 @@ export default function CitiesList() {
       ],
     },
     {
-        title:"Gurgaon",
-        options:[
-            "Huda City Center Metro",
-            "Gurgaon Bus Stand",
-            "Sector 14",
-            "DLF Phase 3",
-            "Mg Road",
-            "Sector 38",
-            "Medanta Hospital",
-            "Gurgaon Sohna Road",
-            "Iffco Chowk",
-            "Sikanderpur"
-        ]
+      title: "Gurgaon",
+      options: [
+        "Huda City Center Metro",
+        "Gurgaon Bus Stand",
+        "Sector 14",
+        "DLF Phase 3",
+        "Mg Road",
+        "Sector 38",
+        "Medanta Hospital",
+        "Gurgaon Sohna Road",
+        "Iffco Chowk",
+        "Sikanderpur"
+      ]
     },
     {
-      title:"Hyderabad",
-      options:[
+      title: "Hyderabad",
+      options: [
         "Secunderabad  Railway Station",
         "Madhapur",
         "Ameerpet",
@@ -92,8 +92,8 @@ export default function CitiesList() {
       ]
     },
     {
-      title:"Kolkata",
-      options:[
+      title: "Kolkata",
+      options: [
         "Howrah Railway Station",
         "New Town",
         "Salt Lake City",
@@ -107,8 +107,8 @@ export default function CitiesList() {
       ]
     },
     {
-      title:"Mumbai",
-      options:[
+      title: "Mumbai",
+      options: [
         "Andheri East",
         "Thane",
         "Andheri West",
@@ -122,8 +122,8 @@ export default function CitiesList() {
       ]
     },
     {
-      title:"Noida",
-      options:[
+      title: "Noida",
+      options: [
         "Sector 62",
         "Sector 18",
         "Pari Chowk",
@@ -137,7 +137,7 @@ export default function CitiesList() {
       ]
     }
   ];
-  return <div className={styles.Div}>
-    {AllCities.map((item)=> <MenuListComposition {...item}></MenuListComposition>)}
-  </div>;
+  return <nav className={styles.Div}>
+    {AllCities.map((item) => <MenuListComposition {...item}></MenuListComposition>)}
+  </nav>;
 }
